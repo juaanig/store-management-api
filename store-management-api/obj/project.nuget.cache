@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "hG8nCoUC9d10+C0Wh3RvaccmlYgdJYfCR5LOofI49g/KTBFgm6dCZ/snELS6xuMhzNW3OU8ZVO5cVvmVzMXgaw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\juan\\source\\repos\\store-management-api\\store-management-api\\store-management-api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\juan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\juan\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\juan\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\juan\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\juan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\juan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
