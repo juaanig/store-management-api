@@ -2,11 +2,12 @@ using Microsoft.AspNetCore.Mvc;
 using store_management_api.Data.Repository.Interfaces;
 using store_management_api.Entities;
 using store_management_api.Models;
+using System.Linq;
 
 namespace store_management_api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class UbicacionController : ControllerBase
     {
         private readonly IUbicacionRepository _ubicacionRepository;
@@ -19,31 +20,10 @@ namespace store_management_api.Controllers
         }
 
 
-        //[HttpPost]
-        //public IActionResult AddUser(AddUsuarioRequest dto)
-        //{
-        //    try
-        //    {
-        //        Usuarios user = new Usuarios()
-        //        {
-        //            Email = dto.Email,
-        //            Name = dto.Name,
-        //            LastName = dto.LastName,
-        //            Role = dto.Role,
-        //            Password = dto.Password,
-        //        };
-
-        //        _usuarioRepository.Add(user);
-        //        return Created("Succesfully created", user);
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest(ex.Message);
-        //    }
-        //}
 
         [HttpGet]
+        // CORROBORAR UBICACION
+
         public IActionResult GetAll()
         {
             try
@@ -66,6 +46,66 @@ namespace store_management_api.Controllers
             {
                 return BadRequest(ex.Message);
 
+            }
+        }
+
+
+        [HttpPost]
+        [Route("addUbicacion")]
+
+        // CORROBORAR UBICACION
+
+        public IActionResult Add(UbicacionDto dto)
+        {
+            try
+            {
+                Ubicacion ubicacion = new Ubicacion()
+                {
+                    NameLocation = dto.NameLocation,
+                    ExpDate = dto.ExpDate,
+                };
+
+                _ubicacionRepository.Add(ubicacion);
+                return Created("Succesfully created", ubicacion);
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
+
+        [HttpDelete]
+        [Route("deleteUbicacion/{id}")]
+        
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                _ubicacionRepository.Delete(id);
+                return Ok("Borrado exitosamente");
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut]
+        [Route("editUbicacion/{id}/{nameLocation}/{expDate}")]
+
+        public IActionResult Edit(int id, string nameLocation, Boolean expDate)
+        {
+            try
+            {
+                _ubicacionRepository.Edit(id, nameLocation, expDate);
+                return Ok("Editado exitosamente");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
         }
 
