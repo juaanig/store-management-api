@@ -5,6 +5,8 @@ using store_management_api.Data.Repository.Interfaces;
 using store_management_api.Helpers;
 using System.Text;
 using static store_management_api.Data.implementations.ProdRepository;
+using static store_management_api.Data.Repository.implementations.UbicRepository;
+using static store_management_api.Data.Repository.implementations.UsuarioRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -53,8 +55,9 @@ builder.Services.AddAuthentication("Bearer") //"Bearer" es el tipo de auntentica
 
 #region Injection
 builder.Services.AddSingleton<IProductoRepository, ProductoRepository>();
+builder.Services.AddSingleton<IUsuarioRepository, UsuariosRepository>();
+builder.Services.AddSingleton<IUbicacionRepository, UbicacionRepository>();
 
-builder.Services.AddSingleton<Security>();
 
 #endregion
 

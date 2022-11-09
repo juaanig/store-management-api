@@ -64,7 +64,7 @@ namespace store_management_api.Controllers
                         }
                     );
                 }
-                return Ok("HOLA");
+                return Ok(response);
             }
             catch (Exception ex)
             {

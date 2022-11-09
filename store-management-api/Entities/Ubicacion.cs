@@ -1,28 +1,25 @@
 ﻿using System.Collections;
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace store_management_api.Entities
 {
     public class Ubicacion
     {
-        public string nameLocation { get; set; }
-        public int capacity { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+        public string NameLocation { get; set; }
+        public Boolean ExpDate { get; set; }
 
-        public Ubicacion (string nameLocation, int capacity)
+        public Ubicacion (string nameLocation, Boolean expDate)
         {
-            this.nameLocation = nameLocation;
-            this.capacity = capacity;
+            NameLocation = nameLocation;
+            ExpDate = expDate;
         }
 
-        public List<string> dataLocation()
-        {
-            List<string> dataLocations = new List<string>()
-            {
-                this.nameLocation , (this.capacity).ToString() 
-            };
-
-            return dataLocations ; 
-        }
+        public Ubicacion(){ }
 
     }
 }
