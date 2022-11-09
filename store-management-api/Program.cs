@@ -1,3 +1,11 @@
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using store_management_api.Data.Repository.implementations;
+using store_management_api.Data.Repository.Interfaces;
+using store_management_api.Helpers;
+using System.Text;
+using static store_management_api.Data.implementations.ProdRepository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,7 +13,50 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(setupAction =>
+{
+        setupAction.AddSecurityDefinition("StoreManagementApiBearerAuth", new OpenApiSecurityScheme() //Esto va a permitir usar swagger con el token.
+        {
+            Type = SecuritySchemeType.Http,
+            Scheme = "Bearer",
+            Description = "Acá pegar el token generado al loguearse."
+        });
+
+        setupAction.AddSecurityRequirement(new OpenApiSecurityRequirement
+        {
+            {
+                new OpenApiSecurityScheme
+                {
+                    Reference = new OpenApiReference
+                    {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "StoreManagementApiBearerAuth"
+                    } //Tiene que coincidir con el id seteado arriba en la definición
+                }, new List<string>()
+            }
+        });
+});
+builder.Services.AddAuthentication("Bearer") //"Bearer" es el tipo de auntenticación que tenemos que elegir después en PostMan para pasarle el token
+    .AddJwtBearer(options => //Acá definimos la configuración de la autenticación. le decimos qué cosas queremos comprobar. La fecha de expiración se valida por defecto.
+    {
+        options.TokenValidationParameters = new()
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Authentication:Issuer"],
+            ValidAudience = builder.Configuration["Authentication:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["Authentication:SecretForKey"]))
+        };
+    }
+);
+
+#region Injection
+builder.Services.AddSingleton<IProductoRepository, ProductoRepository>();
+
+builder.Services.AddSingleton<Security>();
+
+#endregion
 
 var app = builder.Build();
 

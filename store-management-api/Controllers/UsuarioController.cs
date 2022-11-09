@@ -1,47 +1,77 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using store_management_api.Data.Repository.Interfaces;
 using store_management_api.Entities;
+using store_management_api.Models;
 
 
 namespace store_management_api.Controllers
 {
-    public class UsuarioController : Controller
+    [ApiController]
+    [Route("[controller]")]
+    public class UsuarioController : ControllerBase
     {
-        List<Usuarios> users = new List<Usuarios>()
-        {
-            new Usuarios("Juan" ,"Garnero", "juangarnero@hotmail.com.ar", "jajajajaj12","idolo"),
-            new Usuarios("Lucas" ,"Butto", "lbutto@hotmail.com.ar", "jijijijijijij58","master"),
-            new Usuarios("Herman" ,"Kraus", "hkraus@hotmail.com.ar", "kkkkkkkk45","powerlifter")
-        };
+        
+        private readonly IUsuarioRepository _usuarioRepository;
 
-
-        [HttpGet("[controller]/Lista")]
-        public IEnumerable<Usuarios> Lista()
+        
+        public UsuarioController(IUsuarioRepository usuarioRepository )
         {
-            return users;
+            _usuarioRepository = usuarioRepository;
+     
         }
 
-        /*
-          ########### ENDPOINT PARA ACTUALIZAR (UPDATE) HTTPPUT  ###########
-        */
-
-        [HttpDelete("[controller]/Eliminar/{index}")]
-        public IEnumerable<Usuarios> Borrar(int index)
+        
+        [HttpPost]
+        public IActionResult AddUser(AddUsuarioRequest dto)
         {
-            this.users.RemoveAt(index);
-            return users;
+            try
+            {
+                Usuarios user = new Usuarios()
+                {
+                    Email = dto.Email,
+                    Name = dto.Name,
+                    LastName = dto.LastName,
+                    Role = dto.Role,
+                    Password = dto.Password,
+                };
 
+                _usuarioRepository.Add(user);
+                return Created("Succesfully created", user);
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
-
-        [HttpPost("[controller]/Crear/{name}/{lastname}/{email}/{password}/{role}")]
-        public IEnumerable<Usuarios> Crear(string name,string lastname,string email,string password,string role)
+        [HttpGet]
+        public IActionResult GetAll()
         {
+            try
+            {
+                List<UsuarioResponse> response = new List<UsuarioResponse>();
+                List<Usuarios> users = _usuarioRepository.GetAll();
+                foreach (var user in users)
+                {
+                    response.Add(
+                        new UsuarioResponse()
+                        {
+                            Name = user.Name,
+                            LastName = user.LastName,
+                            Mail = user.Email,
+                            Role = user.Role,
+                        }
+                    );
+                }
+                return Ok("HOLA");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
 
-            Usuarios user = new Usuarios(name, lastname, email, password, role);
-            this.users.Add(user);
-            return users;
-        }
+            }
+        } 
 
 
     }

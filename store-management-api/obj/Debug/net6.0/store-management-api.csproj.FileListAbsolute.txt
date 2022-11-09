@@ -25,3 +25,10 @@ C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\n
 C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.pdb
 C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.genruntimeconfig.cache
 C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\ref\store-management-api.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

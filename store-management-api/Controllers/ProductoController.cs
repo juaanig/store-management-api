@@ -1,46 +1,44 @@
 using Microsoft.AspNetCore.Mvc;
+using store_management_api.Data.Repository.Interfaces;
 using store_management_api.Entities;
+using store_management_api.Models;
 using System.Linq;
+using static store_management_api.Data.implementations.ProdRepository;
 
 namespace store_management_api.Controllers
 {
-    public class ProductController : ControllerBase
+    [ApiController]
+    [Route("[controller]")]
+    public class ProductoController : ControllerBase
     {
-        List<Producto> products = new List<Producto>()
-        {
-            new Producto("Honda cbr " ,10,59600,new DateTime(2100,5,12), new DateTime(2020,5,12)),
-            new Producto("Yamaha r1 " ,5,60000 ,new DateTime(2100,5,12), new DateTime(2023,5,12)),
-            new Producto("Bmw s1000rr" ,2,75000 ,new DateTime(2100,5,12),new DateTime(2021,5,12))
-        };
 
-        /*
-          ########### ENDPOINT PARA ACTUALIZAR (UPDATE) HTTPPUT  ###########
-        */
+        private readonly IProductoRepository _productoRepository;
 
-        [HttpGet("[controller]/Lista")]
-        public IEnumerable<Producto> Lista()
+        public ProductoController(IProductoRepository productoRepository)
         {
-            return products;
+            _productoRepository = productoRepository;
         }
 
-
-
-        [HttpDelete("[controller]/Eliminar/{index}")]
-        public IEnumerable<Producto> Borrar(int index) 
+        [HttpGet]
+        public IActionResult GetAll()
         {
-            this.products.RemoveAt(index);
-            return products;
+            
+            List<Producto> productos = _productoRepository.GetAll();
+            List<ProductoDto> response = new List<ProductoDto>();
+            foreach(var producto in productos)
+            {
+                response.Add(
+                    new ProductoDto()
+                    {
+                        Name = producto.Name,
+                        Quantity = producto.Quantity,
+                        Price = producto.Price
+                    }
+                );
+            }
+            
+            return Ok(response);
 
-        }
-
-
-        [HttpPost("[controller]/Crear/{name}/{quantity}/{price}")]
-        public IEnumerable<Producto> Crear(string name,int quantity,int price)
-        {
-
-            Producto item = new Producto(name, quantity, price, new DateTime(2100, 5, 12), new DateTime(2020, 5, 12));
-            this.products.Add(item);    
-            return products;
         }
     }
 }
