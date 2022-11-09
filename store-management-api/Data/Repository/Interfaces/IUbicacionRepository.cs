@@ -14,7 +14,7 @@ namespace store_management_api.Data.Repository.Interfaces
 
         public void Delete(int id);
 
-        public void Edit(int id, string nameLocation,Boolean expDate);
+        public void Edit(int id, string nameLocation,bool expDate);
 
     }
 }

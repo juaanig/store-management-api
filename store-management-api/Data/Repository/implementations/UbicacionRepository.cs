@@ -38,7 +38,7 @@ namespace store_management_api.Data.Repository.implementations
                 }
             }
 
-            public void Edit(int id, string nameLocation, Boolean expDate)
+            public void Edit(int id, string nameLocation, bool expDate)
             {
                 try
                 {

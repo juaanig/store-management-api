@@ -11,9 +11,9 @@ namespace store_management_api.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string NameLocation { get; set; }
-        public Boolean ExpDate { get; set; }
+        public bool ExpDate { get; set; }
 
-        public Ubicacion (string nameLocation, Boolean expDate)
+        public Ubicacion (string nameLocation, bool expDate)
         {
             NameLocation = nameLocation;
             ExpDate = expDate;
