@@ -1,8 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\store-management-api"
+    "\\store-management-api",
+    "\\store-management-api\\Controllers",
+    "\\store-management-api\\Data",
+    "\\store-management-api\\Data\\Repository",
+    "\\store-management-api\\Data\\Repository\\implementations",
+    "\\store-management-api\\Data\\Repository\\Interfaces",
+    "\\store-management-api\\Entities",
+    "\\store-management-api\\Models"
   ],
-  "SelectedNode": "\\store-management-api.sln",
+  "SelectedNode": "\\store-management-api",
   "PreviewInSolutionExplorer": false
 }

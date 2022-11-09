@@ -12,7 +12,7 @@ namespace store_management_api.Entities
         public int Id { get; set; }
         public string NameLocation { get; set; }
         public bool ExpDate { get; set; }
-
+        
         public Ubicacion (string nameLocation, bool expDate)
         {
             NameLocation = nameLocation;

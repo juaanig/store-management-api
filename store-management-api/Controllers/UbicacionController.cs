@@ -78,7 +78,7 @@ namespace store_management_api.Controllers
 
 
         [HttpDelete]
-        [Route("deleteUbicacion/{id}")]
+        [Route("deleteUbicacion/")]
         
         public IActionResult Delete(int id)
         {
@@ -94,7 +94,7 @@ namespace store_management_api.Controllers
         }
 
         [HttpPut]
-        [Route("editUbicacion/{id}/{nameLocation}/{expDate}")]
+        [Route("editUbicacion/")]
 
         public IActionResult Edit(int id, string nameLocation, bool expDate)
         {
