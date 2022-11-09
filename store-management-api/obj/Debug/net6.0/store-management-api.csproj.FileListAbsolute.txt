@@ -1,0 +1,102 @@
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\appsettings.json
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\store-management-api.exe
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\store-management-api.deps.json
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\store-management-api.runtimeconfig.json
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\store-management-api.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\store-management-api.pdb
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.csproj.AssemblyReference.cache
+C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.AssemblyInfoInputs.cache
+C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.AssemblyInfo.cs
+C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.csproj.CoreCompileInputs.cache
+C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\scopedcss\bundle\store-management-api.styles.css
+C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.csproj.CopyComplete
+C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\refint\store-management-api.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.pdb
+C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.genruntimeconfig.cache
+C:\Users\juan\source\repos\store-management-api\store-management-api\obj\Debug\net6.0\ref\store-management-api.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\juan\source\repos\store-management-api\store-management-api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\appsettings.Development.json
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\appsettings.json
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\store-management-api.exe
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\store-management-api.deps.json
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\store-management-api.runtimeconfig.json
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\store-management-api.dll
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\store-management-api.pdb
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.csproj.AssemblyReference.cache
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.GeneratedMSBuildEditorConfig.editorconfig
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.AssemblyInfoInputs.cache
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.AssemblyInfo.cs
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.csproj.CoreCompileInputs.cache
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.MvcApplicationPartsAssemblyInfo.cs
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.MvcApplicationPartsAssemblyInfo.cache
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\obj\Debug\net6.0\staticwebassets.build.json
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\obj\Debug\net6.0\staticwebassets.development.json
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\obj\Debug\net6.0\scopedcss\bundle\store-management-api.styles.css
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.csproj.CopyComplete
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.dll
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\obj\Debug\net6.0\refint\store-management-api.dll
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.pdb
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.genruntimeconfig.cache
+D:\Facultad\2_ Año\3er_Cuatrimestre\Programacion III\store-management-api\store-management-api\obj\Debug\net6.0\ref\store-management-api.dll
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\appsettings.Development.json
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\appsettings.json
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\store-management-api.exe
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\store-management-api.deps.json
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\store-management-api.runtimeconfig.json
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\store-management-api.dll
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\store-management-api.pdb
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\GitHub\TPI\store-management-api\store-management-api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\GitHub\TPI\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.csproj.AssemblyReference.cache
+D:\GitHub\TPI\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\TPI\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.AssemblyInfoInputs.cache
+D:\GitHub\TPI\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.AssemblyInfo.cs
+D:\GitHub\TPI\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.csproj.CoreCompileInputs.cache
+D:\GitHub\TPI\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.MvcApplicationPartsAssemblyInfo.cs
+D:\GitHub\TPI\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.MvcApplicationPartsAssemblyInfo.cache
+D:\GitHub\TPI\store-management-api\store-management-api\obj\Debug\net6.0\staticwebassets.build.json
+D:\GitHub\TPI\store-management-api\store-management-api\obj\Debug\net6.0\staticwebassets.development.json
+D:\GitHub\TPI\store-management-api\store-management-api\obj\Debug\net6.0\scopedcss\bundle\store-management-api.styles.css
+D:\GitHub\TPI\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.csproj.CopyComplete
+D:\GitHub\TPI\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.dll
+D:\GitHub\TPI\store-management-api\store-management-api\obj\Debug\net6.0\refint\store-management-api.dll
+D:\GitHub\TPI\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.pdb
+D:\GitHub\TPI\store-management-api\store-management-api\obj\Debug\net6.0\store-management-api.genruntimeconfig.cache
+D:\GitHub\TPI\store-management-api\store-management-api\obj\Debug\net6.0\ref\store-management-api.dll

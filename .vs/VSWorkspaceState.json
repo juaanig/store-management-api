@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\store-management-api",
+    "\\store-management-api\\Controllers",
+    "\\store-management-api\\Data",
+    "\\store-management-api\\Data\\Repository",
+    "\\store-management-api\\Data\\Repository\\Interfaces"
+  ],
+  "SelectedNode": "\\store-management-api\\Controllers\\UbicacionController.cs",
+  "PreviewInSolutionExplorer": false
+}
