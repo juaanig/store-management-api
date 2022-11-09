@@ -57,8 +57,6 @@ builder.Services.AddAuthentication("Bearer") //"Bearer" es el tipo de auntentica
 builder.Services.AddSingleton<IProductoRepository, ProductoRepository>();
 builder.Services.AddSingleton<IUsuarioRepository, UsuariosRepository>();
 builder.Services.AddSingleton<IUbicacionRepository, UbicacionRepository>();
-
-
 #endregion
 
 var app = builder.Build();

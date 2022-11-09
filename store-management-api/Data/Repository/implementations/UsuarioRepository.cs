@@ -19,6 +19,7 @@ namespace store_management_api.Data.Repository.implementations
                 LastName = "Mulé",
                 Email = "fm@gmail.com",
                 Role = "Deposito",
+                Password = "francisco123"
             }
         };
 
