@@ -786,19 +786,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fran_\\.nuget\\packages\\": {}
+    "C:\\Users\\juan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Facultad\\2_ Año\\3er_Cuatrimestre\\Programacion III\\store-management-api\\store-management-api\\store-management-api.csproj",
+      "projectUniqueName": "C:\\Users\\juan\\source\\repos\\store-management-api\\store-management-api\\store-management-api.csproj",
       "projectName": "store-management-api",
-      "projectPath": "D:\\Facultad\\2_ Año\\3er_Cuatrimestre\\Programacion III\\store-management-api\\store-management-api\\store-management-api.csproj",
-      "packagesPath": "C:\\Users\\fran_\\.nuget\\packages\\",
-      "outputPath": "D:\\Facultad\\2_ Año\\3er_Cuatrimestre\\Programacion III\\store-management-api\\store-management-api\\obj\\",
+      "projectPath": "C:\\Users\\juan\\source\\repos\\store-management-api\\store-management-api\\store-management-api.csproj",
+      "packagesPath": "C:\\Users\\juan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\juan\\source\\repos\\store-management-api\\store-management-api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\fran_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\juan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
