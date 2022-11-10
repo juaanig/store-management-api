@@ -53,6 +53,8 @@ namespace store_management_api.Controllers
         {
             try
             {
+
+
                 Producto producto = new Producto()
                 {
                     Name =dto.Name,
@@ -63,6 +65,7 @@ namespace store_management_api.Controllers
                     Ubicaciones = _ubicacionRepository.GetOne(dto.UbicacionId)[0],
                 };
 
+                validateQuantity(producto);
                 _productoRepository.Add(producto);
                 return Created("Succesfully created", producto);
 
@@ -102,5 +105,17 @@ namespace store_management_api.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [NonAction]
+        public void validateQuantity(Producto producto)
+        {
+            
+            if(producto.Quantity <= 0)
+            {
+                throw new Exception("La cantidad tiene que mayor a cero");
+            }
+
+        }
+
     }
 }
