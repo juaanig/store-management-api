@@ -7,13 +7,6 @@ namespace store_management_api.Data.implementations
 
     public class ProductoRepository : IProductoRepository
     {
-        //public static List<Producto> products = new List<Producto>()
-        //{
-        //    new Producto("Honda cbr " ,10,59600,new DateTime(2100,5,12), new DateTime(2020,5,12)),
-        //    new Producto("Yamaha r1 " ,5,60000 ,new DateTime(2100,5,12), new DateTime(2023,5,12)),
-        //    new Producto("Bmw s1000rr" ,2,75000 ,new DateTime(2100,5,12),new DateTime(2021,5,12))
-        //};
-
         private readonly UsuarioContext _context;
 
         public ProductoRepository(UsuarioContext context)
@@ -46,12 +39,11 @@ namespace store_management_api.Data.implementations
             }
         }
 
-        public void Edit(int id, string productName, DateTime expirationDate)
+        public void Edit(int id, string productName)
         {
             try
             {
                 _context.Productos.First(x => (x.Id).Equals(id)).Name = productName;
-                _context.Productos.First(x => (x.Id).Equals(id)).ExpDate = expirationDate;
                 _context.SaveChanges();
             }
             catch

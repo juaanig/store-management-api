@@ -61,6 +61,7 @@ namespace store_management_api.Controllers
                             LastName = user.LastName,
                             Mail = user.Email,
                             Role = user.Role,
+                            Id = user.Id,   
                         }
                     );
                 }

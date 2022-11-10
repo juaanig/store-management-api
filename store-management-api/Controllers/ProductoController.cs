@@ -13,10 +13,12 @@ namespace store_management_api.Controllers
     {
 
         private readonly IProductoRepository _productoRepository;
+        private readonly IUbicacionRepository _ubicacionRepository;
 
-        public ProductoController(IProductoRepository productoRepository)
+        public ProductoController(IProductoRepository productoRepository, IUbicacionRepository ubicacionRepository)
         {
             _productoRepository = productoRepository;
+            _ubicacionRepository = ubicacionRepository;
         }
 
         [HttpGet]
@@ -30,9 +32,13 @@ namespace store_management_api.Controllers
                 response.Add(
                     new ProductoDto()
                     {
+                        Id = producto.Id,
                         Name = producto.Name,
                         Quantity = producto.Quantity,
-                        Price = producto.Price
+                        Price = producto.Price,
+                        UbicacionId = producto.UbicacionId,
+                        EntryDate= producto.EntryDate,
+                        ExpDate= producto.ExpDate,
                     }
                 );
             }
@@ -49,11 +55,12 @@ namespace store_management_api.Controllers
             {
                 Producto producto = new Producto()
                 {
-                    Name=dto.Name,
+                    Name =dto.Name,
                     Quantity=dto.Quantity,  
                     Price=dto.Price,
                     EntryDate=dto.EntryDate,
                     ExpDate=dto.ExpDate,
+                    Ubicaciones = _ubicacionRepository.GetOne(dto.UbicacionId)[0],
                 };
 
                 _productoRepository.Add(producto);
@@ -62,7 +69,7 @@ namespace store_management_api.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex);
+                return BadRequest(ex.Message);
             }
         }
 
@@ -83,11 +90,11 @@ namespace store_management_api.Controllers
 
         [HttpPut]
         [Route("editProducto/")]
-        public IActionResult Edit(int id, string productName, DateTime expirationDate)
+        public IActionResult Edit(int id, string productName)
         {
             try
             {
-                _productoRepository.Edit(id, productName, expirationDate);
+                _productoRepository.Edit(id, productName);
                 return Ok("Editado exitosamente");
             }
             catch (Exception ex)

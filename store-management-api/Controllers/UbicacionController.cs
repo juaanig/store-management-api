@@ -13,11 +13,14 @@ namespace store_management_api.Controllers
     public class UbicacionController : ControllerBase
     {
         private readonly IUbicacionRepository _ubicacionRepository;
+        private readonly IUsuarioRepository _usuarioRepository;
 
-        public UbicacionController(IUbicacionRepository ubicacionRepository)
+        public UbicacionController(IUbicacionRepository ubicacionRepository,IUsuarioRepository usuarioRepository)
         {
             _ubicacionRepository = ubicacionRepository;
+            _usuarioRepository = usuarioRepository;
         }
+
 
         [HttpGet]
         // CORROBORAR UBICACION
@@ -27,13 +30,17 @@ namespace store_management_api.Controllers
             {
                 List<UbicacionDto> response = new List<UbicacionDto>();
                 List<Ubicacion> ubicaciones = _ubicacionRepository.GetAll();
+
                 foreach (var ubic in ubicaciones)
                 {
+   
                     response.Add(
                         new UbicacionDto()
                         {
                             NameLocation = ubic.NameLocation,
                             ExpDate = ubic.ExpDate,
+                            Id = ubic.Id,
+                            UsuarioId = ubic.UsuarioId,
                         }
                     );
                 }
@@ -51,12 +58,15 @@ namespace store_management_api.Controllers
         [Route("addUbicacion")]
         public IActionResult Add(UbicacionDto dto)
         {
+
             try
             {
                 Ubicacion ubicacion = new Ubicacion()
                 {
                     NameLocation = dto.NameLocation,
                     ExpDate = dto.ExpDate,
+                    UsuarioId = dto.UsuarioId,
+                    Usuario = _usuarioRepository.GetOne(dto.UsuarioId)[0],
                 };
 
                 _ubicacionRepository.Add(ubicacion);

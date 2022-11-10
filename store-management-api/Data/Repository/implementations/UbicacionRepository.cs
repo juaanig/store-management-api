@@ -14,13 +14,6 @@ namespace store_management_api.Data.Repository.implementations
             _context = context;
         }
 
-        //public static List<Ubicacion> ubicaciones = new List<Ubicacion>()
-        //{
-        //    new Ubicacion("Enlatados" ,true),
-        //    new Ubicacion("Tetras " ,false),
-        //    new Ubicacion("Saches" ,true)
-        //};
-
         public void Add(Ubicacion ubicacion)
         {
             try
