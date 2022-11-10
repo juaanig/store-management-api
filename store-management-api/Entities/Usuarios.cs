@@ -8,7 +8,6 @@ namespace store_management_api.Entities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]               /*DECORADOR AFECTA A ID */
-
         public int Id { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
@@ -21,6 +20,7 @@ namespace store_management_api.Entities
             set { _Password = Security.CreateSHA512(value); }
         }
         public string Role { get; set; }
+        public ICollection<Ubicacion> Ubicaciones { get; set; }
 
         public Usuarios(string name, string lastName, string mail, string password, string role)
         {
@@ -30,10 +30,9 @@ namespace store_management_api.Entities
             Role = role;
             Password = password;
         }
+        public Usuarios(){}
 
-        public Usuarios()
-        {
-        }
+
     }
 
   

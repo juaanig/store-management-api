@@ -14,18 +14,13 @@ namespace store_management_api.Controllers
     {
         private readonly IUbicacionRepository _ubicacionRepository;
 
-
         public UbicacionController(IUbicacionRepository ubicacionRepository)
         {
             _ubicacionRepository = ubicacionRepository;
-
         }
-
-
 
         [HttpGet]
         // CORROBORAR UBICACION
-
         public IActionResult GetAll()
         {
             try
@@ -54,9 +49,6 @@ namespace store_management_api.Controllers
 
         [HttpPost]
         [Route("addUbicacion")]
-
-        // CORROBORAR UBICACION
-
         public IActionResult Add(UbicacionDto dto)
         {
             try
@@ -96,7 +88,6 @@ namespace store_management_api.Controllers
 
         [HttpPut]
         [Route("editUbicacion/")]
-
         public IActionResult Edit(int id, string nameLocation, bool expDate)
         {
             try

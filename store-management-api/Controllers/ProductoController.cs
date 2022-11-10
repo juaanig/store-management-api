@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using store_management_api.Data.Repository.Interfaces;
 using store_management_api.Entities;
 using store_management_api.Models;
-using static store_management_api.Data.implementations.ProdRepository;
 
 namespace store_management_api.Controllers
 {
@@ -40,6 +39,61 @@ namespace store_management_api.Controllers
             
             return Ok(response);
 
+        }
+
+        [HttpPost]
+        [Route("addProducto")]
+        public IActionResult Add(ProductoDto dto)
+        {
+            try
+            {
+                Producto producto = new Producto()
+                {
+                    Name=dto.Name,
+                    Quantity=dto.Quantity,  
+                    Price=dto.Price,
+                    EntryDate=dto.EntryDate,
+                    ExpDate=dto.ExpDate,
+                };
+
+                _productoRepository.Add(producto);
+                return Created("Succesfully created", producto);
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+
+        [HttpDelete]
+        [Route("deleteProducto/")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                _productoRepository.Delete(id);
+                return Ok("Borrado exitosamente");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut]
+        [Route("editProducto/")]
+        public IActionResult Edit(int id, string productName, DateTime expirationDate)
+        {
+            try
+            {
+                _productoRepository.Edit(id, productName, expirationDate);
+                return Ok("Editado exitosamente");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

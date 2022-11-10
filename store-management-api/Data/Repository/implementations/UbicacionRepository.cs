@@ -1,79 +1,89 @@
 ﻿using store_management_api.Data.Repository.Interfaces;
+using store_management_api.DBcontext;
 using store_management_api.Entities;
 
 namespace store_management_api.Data.Repository.implementations
 {
-    public class UbicRepository
+   
+    public class UbicacionRepository : IUbicacionRepository
     {
-        public class UbicacionRepository : IUbicacionRepository
+
+        private readonly UsuarioContext _context; 
+
+        public UbicacionRepository(UsuarioContext context) { 
+            _context = context;
+        }
+
+        //public static List<Ubicacion> ubicaciones = new List<Ubicacion>()
+        //{
+        //    new Ubicacion("Enlatados" ,true),
+        //    new Ubicacion("Tetras " ,false),
+        //    new Ubicacion("Saches" ,true)
+        //};
+
+        public void Add(Ubicacion ubicacion)
         {
-            public static List<Ubicacion> ubicaciones = new List<Ubicacion>()
+            try
             {
-                new Ubicacion("Enlatados" ,true),
-                new Ubicacion("Tetras " ,false),
-                new Ubicacion("Saches" ,true)
+                _context.Ubicaciones.Add(ubicacion);
+                _context.SaveChanges();
+            }
+            catch
+            {
+                throw new Exception();
+            }
+        }
+
+        public void Delete(int id)
+        {
+            try
+            {
+                _context.Ubicaciones.Remove(_context.Ubicaciones.First(x => (x.Id).Equals(id)));
+                _context.SaveChanges();
+            }
+            catch
+            {
+                throw new Exception();
+            }
+        }
+
+        public void Edit(int id, string nameLocation, bool expDate)
+        {
+            try
+            {
+                _context.Ubicaciones.First(x => (x.Id).Equals(id)).NameLocation = nameLocation;
+                _context.Ubicaciones.First(x => (x.Id).Equals(id)).ExpDate = expDate;
+                _context.SaveChanges();
+            }
+            catch
+            {
+                throw new Exception();
+            }
+        }
+
+        public List<Ubicacion> GetAll()
+        {
+            try
+            {
+                return _context.Ubicaciones.ToList();
+            }
+            catch
+            {
+                throw new Exception();
             };
+        }
 
-            public void Add(Ubicacion ubicacion)
+        public List<Ubicacion> GetOne(int id)
+        {
+            try
             {
-                try
-                {
-                    ubicaciones.Add(ubicacion);
-                }
-                catch
-                {
-                    throw new Exception();
-                }
+                return _context.Ubicaciones.Where(x => (x.Id).Equals(id)).ToList();
             }
-
-            public void Delete(int id)
+            catch
             {
-                try
-                {
-                    ubicaciones.Remove(ubicaciones.First(x => (x.Id).Equals(id)));
-                }
-                catch
-                {
-                    throw new Exception();
-                }
-            }
-
-            public void Edit(int id, string nameLocation, bool expDate)
-            {
-                try
-                {
-                    ubicaciones.First(x => (x.Id).Equals(id)).NameLocation = nameLocation;
-                    ubicaciones.First(x => (x.Id).Equals(id)).ExpDate = expDate;
-                }
-                catch
-                {
-                    throw new Exception();
-                }
-            }
-
-            public List<Ubicacion> GetAll()
-            {
-                try
-                {
-                    return ubicaciones.ToList();
-                }
-                catch
-                {
-                    throw new Exception();
-                };
-            }
-
-            public List<Ubicacion> GetOne(int id)
-            {
-                try
-                {
-                    return ubicaciones.Where(x => (x.Id).Equals(id)).ToList();
-                }
-                catch
-                {
-                    throw new Exception();
-                }
+                throw new Exception();
             }
         }
     }
+    
 }

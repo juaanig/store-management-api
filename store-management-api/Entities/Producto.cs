@@ -7,12 +7,15 @@ namespace store_management_api.Entities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]           /*DECORADOR AFECTA A ID */
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public int Quantity { get; set; }
         public int Price { get; set; }
         public DateTime ExpDate { get; set; }
         public DateTime EntryDate { get; set; }
+        [ForeignKey("UbicacionId")]
+        public Ubicacion Ubicaciones { get; set; }
+        public int UbicacionId { get; set; }
 
         public Producto(string name, int quantity, int price, DateTime expDate, DateTime entryDate)
         {
